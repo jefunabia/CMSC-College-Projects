@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CMSC 142 | Lab 2</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <script src="plotly-latest.min.js"></script>
+</head>
+
+<body>
+
+    <div class="jumbotron">
+        <h1 class="display-3">CMSC 142 - Lab 2</h1>
+        <h2>Dynamic Programming</h2>
+        <hr class="my-4">
+        <p>Recommended Browser: Google Chrome (Version 77.0.3865.90 and up)</p>
+        <p>Submission by: 12421</p>
+        <h4>DEV NOTES:</h4>
+        <ul>
+            <li>Google Chrome browser is recommended because I am using performance.now() to compute for the CPU running
+                time of a function. It will give us a floating point number as the result</li>
+            <li>Some browsers round up their numbers instead of having floating point numbers</li>
+            <li>Instead of using the values 100 and 1000, I decided to lower the values (25 and 40) since the browser
+                freezes when the functions are given a large number</li>
+            <li>The green and orange lines aren't overlapping, their results are just too small to be compared to the
+                result given by the blue line</li>
+            <li>To see each of the algorithm's respective values, kindly hover to the each of the points "."</li>
+            <li>To zoom-in into a particular area (for instance: if you want to view the green and orange graphs),
+                kindly go to the area, drag then release. Repeat until the desired zooming scale has been achieved</li>
+            <li>To zoom out, kindly double click</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Fibonacci Series</h2>
+        <hr class="my-4">
+        <div class="row">
+            <div class="col">
+                <div id="fib"></div>
+            </div>
+        </div>
+        <br> <br> <br> <br> <br>
+
+        <h2>Longest Common Subsequence (LCS) <br>Using Bottom-Up Approach</h2>
+        <hr class="my-4">
+        <div class="form-group">
+            <h1>Result:</h1>
+            <h2 class="text-success" id="res"></h2>
+            <h4>Enter First String: </h4>
+            <input type="text" id="s1" class="form-control" placeholder="Enter first string"></input>
+        </div>
+        <div class="form-group">
+            <h4>Enter Second String: </h4>
+            <input type="text" id="s2" class="form-control" placeholder="Enter second string"></input>
+        </div>
+        <div class="form-group">
+            <button onclick="submitLCS()" type="button" class="btn btn-primary">Submit</button>
+        </div>
+    </div>
+    </div>
+
+    <div id="res"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>

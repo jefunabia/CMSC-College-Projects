@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CMSC 142 - Lab 1</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <script src="plotly-latest.min.js"></script>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1 class="display-3">CMSC 142 - Lab 1</h1>
+        <h2>Sorting Algorithms Comparison</h2>
+        <hr class="my-4">
+        <p>Recommended Browser: Google Chrome (Version 77.0.3865.90 and up)</p>
+        <p>Submission by: 12421</p>
+        <h4>DEV NOTES:</h4>
+        <ul>
+            <li>Google Chrome browser is recommended because I am using performance.now() to compute for the CPU running
+                time of a function. It will give us a floating point number as the result</li>
+            <li>Some browsers round up their numbers instead of having floating point numbers</li>
+            <li>To see exact floating point result, kindly hover to the desired bar</li>
+            <li>To ensure a nice-looking graph, kindly run in a maximized window or fullscreen</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Maximum of 10 Elements</h2>
+        <hr class="my-4">
+        <div class="row">
+
+            <div class="col">
+                <h3>Average Case</h3>
+                <div id="10-avg"></div>
+            </div>
+            <div class="col">
+                <h3>Worst Case</h3>
+                <div id="10-worst"></div>
+            </div>
+            <div class="col">
+                <h3>Best Case</h3>
+                <div id="10-best"></div>
+            </div>
+        </div>
+        <br> <br> <br> <br> <br>
+
+        <h2>Maximum of 100 Elements</h2>
+        <hr class="my-4">
+        <div class="row">
+
+            <div class="col">
+                <h3>Average Case</h3>
+                <div id="100-avg"></div>
+            </div>
+            <div class="col">
+                <h3>Worst Case</h3>
+                <div id="100-worst"></div>
+            </div>
+            <div class="col">
+                <h3>Best Case</h3>
+                <div id="100-best"></div>
+            </div>
+        </div>
+        <br> <br> <br> <br> <br>
+
+        <h2>Maximum of 1000 Elements</h2>
+        <hr class="my-4">
+        <div class="row">
+
+            <div class="col">
+                <h3>Average Case</h3>
+                <div id="1000-avg"></div>
+            </div>
+            <div class="col">
+                <h3>Worst Case</h3>
+                <div id="1000-worst"></div>
+            </div>
+            <div class="col">
+                <h3>Best Case</h3>
+                <div id="1000-best"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
