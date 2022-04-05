@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LFP> Connecting Gamers Worldwide</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="login-page">
+        <div class="form">
+            <form action="home.html" class="register-form">
+                <legend class="header">Register</legend>
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Confirm Password">
+                <button>Create Account</button>
+                <p class="message"><a href="#">Already have an account?</a></p>
+            </form>
+
+            <form action="home.html" class="login form">
+                <legend class="header">Welcome Back!</legend>
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <button>Login</button>
+                <p class="message"><a href="#">Don't have an account? Register here!</a></p>
+            </form>
+        </div>
+    </div>
+
+
+    <script src='https://code.jquery.com/jquery-3.3.1.min.js'>
+
+    </script>
+
+    <script>
+        $('.message a').click(function () {
+            $('form').animate({ height: "toggle", opacity: "toggle" });
+        });
+    </script>
+
+</body>
+
+</html>

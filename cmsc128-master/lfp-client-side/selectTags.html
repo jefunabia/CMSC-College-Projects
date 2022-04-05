@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LFP> Select Tags</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,500,800" rel="stylesheet">
+</head>
+<body>
+    <div class="appName"><span class="spanTitle">L</span>ooking <span class="spanTitle">F</span>or <span class="spanTitle">P</span>arty
+        <span class="spanSymbol">></span></div>
+    <nav class="navbar">
+        <span class="open-slide">
+            <a href="#" onclick="openSlideMenu()">
+                <svg width="30" height="30">
+                    <path d="M0, 5 30, 5" stroke="#fff" stroke-width="5" />
+                    <path d="M0, 14 30, 14" stroke="#fff" stroke-width="5" />
+                    <path d="M0, 23 30, 23" stroke="#fff" stroke-width="5" />
+                </svg>
+            </a>
+        </span>
+
+        <ul class="navbarNav">
+            <a href="home.html" id="Home">Home</a>
+            <a href="#" id="FAQs">FAQs</a>
+            <a href="#" id="About">About</a>
+        </ul>
+    </nav>
+
+    <div id="side-menu" class="sideNav">
+            <a href="#" class="buttonClose" onclick="closeSlideMenu()">&times;</a>
+            <a href="#">My Profile</a>
+            <a href="#">Settings</a>
+            <a href="#">Account</a>
+            <a href="#">Help</a>
+            <a href="#">Sign Out</a>
+        </div>
+
+    <header>
+        Look For a Party!
+    </header>
+
+    <!---- COLUMNS START --->
+    <div class="row">
+        <!---- COLUMN 1 (NOTHING HERE) --->
+        <div class="column">
+        </div>
+        <!---- COLUMN 2 (HOME COLUMN) --->
+        <div class="columnTags" >
+            <h2 class="agenda">Game</h2>
+            <div class="form">
+                <form class="game">
+                    <input type="radio" name="game" value="Dota 2" checked> #DOTA2<br>
+                    <input type="radio" name="game" value="League of Legends"> #LOL<br>
+                    <input type="radio" name="game" value="Overwatch"> #OW<br>
+                    <input type="radio" name="game" value="CS:GO"> #CSGO<br>
+                    <input type="radio" name="game" value="Fortnite"> #FN<br>
+                    <input type="radio" name="game" value="PUBG"> #PUBG<br>
+                </form>
+            </div>
+        </div>
+        <!---- COLUMN 3 (FAQS COLUMN) --->
+        <div class="columnTags" >
+            <h2 class="agenda">Country</h2>
+            <div class="form">
+                <form class="country">
+                    <input type="radio" name="country" value="Philippines" checked> #PH<br>
+                    <input type="radio" name="country" value="Japan"> #JP<br>
+                    <input type="radio" name="country" value="North America"> #NA<br>
+                    <input type="radio" name="country" value="Europe"> #EU<br>
+                    <input type="radio" name="country" value="Korea"> #KR<br>
+                    <input type="radio" name="country" value="Singapore"> #SG<br>
+                </form>
+            </div>
+        </div>
+        <!---- COLUMN 4 (ABOUT US COLUMN) --->
+        <div class="columnTags" >
+            <h2 class="agenda">Language</h2>
+            <div class="form">
+                <form action="" class="language">
+                    <input type="radio" name="language" value="Filipino" checked> #FIL<br>
+                    <input type="radio" name="language" value="English"> #ENG<br>
+                    <input type="radio" name="language" value="Cebuano"> #CEB<br>
+                    <input type="radio" name="language" value="Japanese"> #JAP<br>
+                    <input type="radio" name="language" value="Chinese"> #MAN<br>
+                    <input type="radio" name="language" value="Korean"> #HNG<br>
+                </form>
+            </div>
+        </div>
+        <!---- COLUMN 5 (FRIENDS LIST) --->
+        <div class="column">
+        </div>
+    </div>
+
+    <!--- BUTTONS -->
+    <div class="rowButtons">
+            <button class="buttonLFP"><strong>LFP!</button></strong>
+            <button class="buttonCancel"><strong>Cancel</button></strong>
+    </div>
+   
+
+
+
+    <script>
+        function openSlideMenu() {
+            document.getElementById('side-menu').style.width = '250px';
+
+        }
+        function closeSlideMenu() {
+            document.getElementById('side-menu').style.width = '0';
+
+        }
+
+    </script>
+</body>
+
+</html>

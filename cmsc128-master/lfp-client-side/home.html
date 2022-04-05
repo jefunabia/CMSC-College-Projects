@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>LFP> Home</title>
+	<link rel="stylesheet" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,500,800" rel="stylesheet">
+</head>
+
+<body>
+	<div class="appName"><span class="spanTitle">L</span>ooking <span class="spanTitle">F</span>or <span class="spanTitle">P</span>arty
+		<span class="spanSymbol">></span></div>
+	<nav class="navbar">
+		<span class="open-slide">
+			<a href="#" onclick="openSlideMenu()">
+				<svg width="30" height="30">
+					<path d="M0, 5 30, 5" stroke="#fff" stroke-width="5" />
+					<path d="M0, 14 30, 14" stroke="#fff" stroke-width="5" />
+					<path d="M0, 23 30, 23" stroke="#fff" stroke-width="5" />
+				</svg>
+			</a>
+		</span>
+
+		<ul class="navbarNav">
+			<a href="#" id="Home">Home</a>
+			<a href="#" id="FAQs">FAQs</a>
+			<a href="#" id="About">About</a>
+		</ul>
+	</nav>
+
+	<div id="side-menu" class="sideNav">
+		<a href="#" class="buttonClose" onclick="closeSlideMenu()">&times;</a>
+		<a href="#">My Profile</a>
+		<a href="#">Settings</a>
+		<a href="#">Account</a>
+		<a href="#">Help</a>
+		<a href="#">Sign Out</a>
+	</div>
+	<!---- COLUMNS START --->
+	<div class="row">
+		<!---- COLUMN 1 (NOTHING HERE) --->
+		<div class="column">
+		</div>
+		<!---- COLUMN 2 (HOME COLUMN) --->
+		<div class="column">
+		</div>
+		<!---- COLUMN 3 (FAQS COLUMN) --->
+		<div class="column">
+			<button class="buttonLFPHome" onclick="location.href='selectTags.html';">LFP!</button>
+			<div class="textHome">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+					magna aliqua.</p>
+			</div>
+		</div>
+		<!---- COLUMN 4 (ABOUT US COLUMN) --->
+		<div class="column">
+		</div>
+	</div>
+	<!---- COLUMN 5 (FRIENDS LIST) --->
+	<div class="column">
+	</div>
+	</div>
+	<!--
+	<div class="coins">
+		<button class="button2" onclick="location.href='#';">Coins</button>
+	</div>
+
+	<div class="coins-tag">
+		<p>*insert important words here*</p>
+	</div>
+-->
+	<!--	<div class="LFP">
+		<form>
+			<div class="LFP-button">
+				<input type="button1" value="LFP!">
+			</div>
+		</form>
+	</div>
+-->
+
+	<script>
+		function openSlideMenu() {
+			document.getElementById('side-menu').style.width = '250px';
+
+		}
+		function closeSlideMenu() {
+			document.getElementById('side-menu').style.width = '0';
+
+		}
+
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>LFP> About Us</title>
+	<link rel="stylesheet" href="main.css">
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,500,800" rel="stylesheet">
+
+<!--	<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css" rel="stylesheet">
+-->
+
+</head>
+
+<body>
+	 <div class="appName"><span class="spanTitle">L</span>ooking <span class="spanTitle">F</span>or <span class="spanTitle">P</span>arty <span class="spanSymbol">></span></div>
+	<nav class="navbar">
+		<span class="open-slide">
+			<a href="#" onclick="openSlideMenu()">
+				<svg width="30" height="30">
+					<path d="M0, 5 30, 5" stroke="#fff" stroke-width="5"/>
+					<path d="M0, 14 30, 14" stroke="#fff" stroke-width="5"/>
+					<path d="M0, 23 30, 23" stroke="#fff" stroke-width="5"/>
+				</svg>
+			</a>
+		</span>
+
+		<ul class="navbarNav">
+			<a href="home.html" id = "Home">Home</a>
+			<a href="faqs.html" id = "FAQs">FAQs</a>
+			<a href="about.html" id = "About">About</a>
+		</ul>
+	</nav>
+
+	<div id="side-menu" class="sideNav">
+		<a href="#" class="buttonClose" onclick="closeSlideMenu()">&times;</a>
+		<a href="myProfile.html">My Profile</a>
+		<a href="settings.html">Settings</a>
+		<a href="account.html">Account</a>
+		<a href="help.html">Help</a>
+		<a href="login.html">Sign Out</a>
+	</div>
+
+
+<!--	<div class="container">
+		<h1>Friends List</h1>
+		<ul id="names" class="collecionItems">
+			<li clas></li>
+
+		</ul>
+	</div>
+-->
+	<script>
+		function openSlideMenu(){
+			document.getElementById('side-menu').style.width='250px';
+			
+		}
+		function closeSlideMenu(){
+			document.getElementById('side-menu').style.width='0';
+			
+		}
+
+	</script>
+</body>
+</html>

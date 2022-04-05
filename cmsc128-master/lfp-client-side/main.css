@@ -1,0 +1,307 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(rgba(7, 7, 7, 0.4),rgba(12, 12, 12, 0.6)), url(bg4.jpg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+}
+.spanTitle{
+    color: rgb(128, 204, 131);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.spanSymbol{
+    color: rgb(128, 204, 131);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+.appName{
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding-bottom: 10px;
+	padding-top: 10px;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.navbar{
+	background-color: rgb(0, 0, 0);
+	overflow: hidden;
+}
+
+.navbar a{
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+.navbar ul {
+	margin: 10px 0 0;
+	list-style: none;
+}
+
+.navbar a:hover{
+	background-color:rgb(128, 204, 131);
+    color: rgb(0, 0, 0);
+}
+
+.navbar .navbarNav{
+	margin-left: 250px;
+}
+
+header{
+    font-size:30px;
+    color: white;
+    padding: 1% 5% 1% 16%;
+    color: rgb(128, 204, 131);
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.column {
+    float: left;
+    width: 20%;
+    padding: 1%;
+}
+
+.columnTags {
+    float: left;
+    width: 20%;
+    padding: 1%;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.left, .right {
+  width: 25%;
+}
+
+.middle {
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.rowButtons{
+    padding-top: 1%;
+    padding-left: 38%;
+}
+#Home{
+	padding-right:100px;
+	padding-left: 100px;
+	border-right:1px solid gray;
+	border-left:1px solid gray;
+}
+
+#FAQs{
+	padding-right:100px;
+	padding-left: 100px;
+	border-right:1px solid gray;
+}
+
+#About{
+	padding-right:100px;
+	padding-left: 100px;
+	border-right:1px solid gray;
+}
+
+.sideNav{
+	height: 100%;
+	width: 0;
+	position:fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: rgb(0, 0, 0);
+	/*opacity: 0.9;*/
+	overflow-x: hidden;
+	padding-top: 60px;
+	transition: 0.5s;
+}
+
+.sideNav a{
+	padding: 10px 10px 10px 30px;
+	text-decoration: none;
+	font-size: 18px;
+	color: rgb(255, 255, 255);
+	display: block;
+	transition:0.3s;
+}
+
+.sideNav a:hover{
+	background-color:rgb(128, 204, 131);
+    color: rgb(0, 0, 0);
+}
+
+.sideNav .buttonClose{
+	position: absolute;
+	top: 0;
+	right: 22px;
+	font-size: 36px;
+    margin-left: 50px;
+}
+
+.textHome{
+	 top: 25%;
+     padding-left: 100px;
+     padding-top: 20px;
+     color:white;
+     text-align: center;
+}
+
+.coins-tag{
+	 top: 65%;
+     padding-left: 270px;
+     padding-top: 20px;
+     position: absolute;
+     
+}
+
+.button1{
+	position: absolute;
+	top: 20%;
+	font-size: 24px;
+	color: black;
+	padding: 14px 40px;
+	background-color: #e7e7e7;
+}
+
+.button1:hover{
+	color: white;
+	background-color: #6f6f6f;
+}
+
+.coins{
+	padding-left: 300px;
+}
+
+.button2{
+	position: absolute;
+	top: 60%;
+	font-size: 24px;
+	padding: 14px 40px;
+	color: black;
+	background-color: #e7e7e7;
+}
+.button2:hover{
+	color: white;
+	background-color: #6f6f6f;
+}
+
+.buttonLFPHome:hover{
+    background: rgb(128, 204, 131);
+    color: black;
+}
+
+.buttonLFPHome{
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: rgb(68, 110, 70);
+    width:150px;
+    border:0;
+    padding: 15px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    display: table;
+    margin: 0 auto
+    
+}
+
+.buttonLFP:hover{
+    background: rgb(128, 204, 131);
+    color: black;
+}
+
+
+.buttonLFP{
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: rgb(68, 110, 70);
+    width:150px;
+    border:0;
+    padding: 15px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.buttonCancel:hover{
+    background: rgb(218, 116, 116);
+    color: black;
+}
+
+.buttonCancel{
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: rgb(170, 65, 65);
+    width:150px;
+    border:0;
+    padding: 15px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+.agenda{
+    text-align:center;
+    color: rgb(255, 255, 255)
+}
+
+input[type="radio"] {
+    margin-bottom: 8%;
+}
+
+
+.form{
+    background: #000000;
+    position: relative;
+    z-index: 1;
+    max-width: 480px;
+    margin: 0 auto 20px;
+    padding-left:10%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+@media(max-width: 568px){
+	.navbarNav{
+		display: none
+    }
+    
+    .column {
+        float: left;
+    }
+    
+    .left, .right {
+        width: 25%;
+    }
+    
+    .middle {
+        width: 50%;
+    }
+
+ 
+
+}
