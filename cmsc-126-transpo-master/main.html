@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LookItUP | Web App</title>
+
+    <!--Our stylesheet-->
+    <link rel="stylesheet" href="style.css">
+    <!--Bootstrap
+    <link href="https://bootswatch.com/4/darkly/bootstrap.min.css" rel="stylesheet" type="text/css">-->
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="nav-class">
+    <nav class="navbar">
+        
+        <span class="open-slide">
+            <a href="#" onclick="openSlideMenu()">
+                <div class="menu-bars">
+            <i class="fas fa-bars"></i>
+        </div>
+        </a>
+        </span>
+        <ul>
+            <div class="title">
+                <li><a href= "home.html">LookItUP</a></li>
+            </div>
+             
+             <div class="right-navbar">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="main.html">Web App</a></li>
+            <li><a href= "login.html">Login</a></li>
+            <li><a href= "register.html">Register</a></li>
+            <li><a href= "about.html">About</a></li>
+            <li><a href= "contact.html">Contact</a></li>
+        </div>
+        </ul>
+    </nav>
+</div>
+
+    <div id="side-bar" class="side-nav">
+        <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <form>
+        <h3>Enter Starting Point:</h3>
+        <input type="text" name="starting-point" placeholder="Starting Point">
+        <h3>Enter Destination Point:</h3>
+        <input type="text" name="destination-point" placeholder="Destination Point">
+       </form>
+     <div class="div-color">
+        <h4>Public Transporation Vehicles:</h4>
+    </div>
+    <div class="public-transpo-vehicles">
+        <ul>
+            <li><a href="#" onclick="showJeepneyDetails()">Jeepney</a></li>
+            <li><a href="#" onclick="showTaxiDetails()">Taxi</a></li>
+            <li><a href="#" onclick="showMotorcycleDetails()">Motorcycle</a></li>
+            <li><a href="#" onclick="showTricycleDetails()">Tricycle</a></li>
+            <li><a href="#" onclick="showBusDetails()">Bus</a></li>
+            <li><a href="#" onclick="showTrainDetails()">Train</a></li>
+            <li><a href="#" onclick="showTSA()">Transportation Services Applications</a></li>
+        </ul>
+    </div>
+
+    <div class="div-color">
+        <h4>Details:</h4>
+    </div>
+        <div class="details">
+            <ul id="details-list" class="details-list-class"></ul>
+    </div>
+    </div>
+    <div id="main" class="main-map">
+        <h1>Map goes here</h1>
+    </div>
+
+    <script>
+        function openSlideMenu(){
+            document.getElementById('side-bar').style.width = '500px';
+            document.getElementById('main').style.marginLeft = '500px';
+        }
+
+        function closeSlideMenu(){
+            document.getElementById('side-bar').style.width = '0';
+            document.getElementById('main').style.marginLeft = '0';
+        }
+
+        // Details
+        function createListItem(type){
+            listItem = document.createElement("li");
+            listItem.innerHTML = type
+            return listItem;
+        }
+        function createListItemWithCost(type, cost){
+            listItem = document.createElement("li");
+            listItem.innerHTML = type + cost + "   PHP";
+            return listItem;
+        }
+
+
+        function showJeepneyDetails(){
+            detailsList = document.getElementById("details-list");
+            detailsList.innerHTML = "";
+            listItem = createListItemWithCost("Jeepney Route, ",7);
+            detailsList.appendChild(listItem);
+        }
+
+        function showTaxiDetails(){
+            detailsList = document.getElementById("details-list");
+            detailsList.innerHTML = "";
+            listItem = createListItemWithCost("Taxi, ",40);
+            detailsList.appendChild(listItem);
+        }
+
+        function showMotorcycleDetails(){
+            detailsList = document.getElementById("details-list");
+            detailsList.innerHTML = "";
+            listItem = createListItemWithCost("Motorcycle, ",30);
+            detailsList.appendChild(listItem);
+        }
+
+        function showTricycleDetails(){
+            detailsList = document.getElementById("details-list");
+            detailsList.innerHTML = "";
+            listItem = createListItemWithCost("Tricycle, ",30);
+            detailsList.appendChild(listItem);
+        }
+
+        function showBusDetails(){
+            detailsList = document.getElementById("details-list");
+            detailsList.innerHTML = "";
+            listItem = createListItemWithCost("Bus, ",50);
+            detailsList.appendChild(listItem);
+        }
+
+        function showTrainDetails(){
+            detailsList = document.getElementById("details-list");
+            detailsList.innerHTML = "";
+            listItem = createListItemWithCost("Train, ",30);
+            detailsList.appendChild(listItem);
+        }
+
+        function showTSA(){
+            detailsList = document.getElementById("details-list");
+            detailsList.innerHTML = "";
+            angkasListItem = createListItem("Angkas");
+            grabListItem = createListItem("Grab");
+            uberListItem = createListItem("Uber");
+            detailsList.appendChild(angkasListItem);
+            detailsList.appendChild(grabListItem);
+            detailsList.appendChild(uberListItem);
+        }
+
+    </script>
+</body>
+</html>
