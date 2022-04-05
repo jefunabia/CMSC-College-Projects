@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lab 3</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="https://bootswatch.com/4/flatly/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+
+    <div class="jumbotron">
+        <h2 class="display-4">Memory Management and Allocation Strategies</h2>
+        <p class="lead">CMSC 125 - Lab 3</p>
+        <hr class="my-4">
+        <p>Janelle Elaiza F. Unabia</p>
+        <button onclick="btn_show_list('job-list')" type="button" class="btn btn-primary">Show Job List</button>
+        <button onclick="btn_show_list('memory-list')" type="button" class="btn btn-info">Show Memory List</button>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div id="job-list" style="display: none;">
+                    <h3>Job List</h3>
+                    <table id="job" class="table table-hover">
+                        <thead>
+                            <tr class="table-primary">
+                                <td>Job Stream #</td>
+                                <td>Time</td>
+                                <td>Job Size</td>
+                            </tr>
+                        </thead>
+                        <tbody id="jobs-row">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col">
+                <div id="memory-list" style="display: none;">
+                    <h3>Memory List</h3>
+                    <table id="memory" class="table table-hover">
+                        <thead>
+                            <tr class="table-info">
+                                <td>Memory Block #</td>
+                                <td>Size</td>
+                            </tr>
+                        </thead>
+                        <tbody id="memory-row">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <h3>Select Allocation Strategy:</h3>
+        <div class="row">
+
+            <div class="col">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-primary">
+                        <input type="radio" name="options" id="ff" autocomplete="off" checked=""> First-Fit
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="radio" name="options" id="wf" autocomplete="off">Worst-Fit
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="radio" name="options" id="bf" autocomplete="off">Best-Fit
+                    </label>
+                </div>
+            </div>
+
+            <div class="col">
+                <button onclick="start()" type="button" class="btn btn-success custom-width-2">Start</button>
+                <button onclick="reset()" type="button" class="btn btn-danger custom-width-2">Reset</button>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <div id="algo-name"></div>
+                <h3><strong>[Time]</strong> <span id="time"></span></h3>
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <table class="table table-hover">
+                    <thead>
+                        <tr class="table-primary">
+                            <td>Job Stream #</td>
+                            <td>Time Left</td>
+                            <td>Job Size</td>
+                            <td>Status</td>
+                            <td>Memory Block #</td>
+                        </tr>
+                    </thead>
+                    <tbody id="result-job">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col">
+                <table class="table table-hover">
+                    <thead>
+                        <tr class="table-info">
+                            <td>Memory Block #</td>
+                            <td>Original Size</td>
+                            <td>Current Size Left</td>
+                            <td>Job(s) Using</td>
+                        </tr>
+                    </thead>
+                    <tbody id="result-memory">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col">
+                <h3>Timely Data</h3>
+                <hr>
+                <h4>Throughput</h4>
+                <p style="margin-left: 2%;" id="throughput">---</p>
+                <hr>
+                <h4>Storage Utilization</h4>
+                <div style="margin-left: 2%;">
+                    <h5>% partitions not used:</h5>
+                    <p style="margin-left: 2%;" id="partitions-not-used">---</p>
+                    <h5>% partitions used:</h5>
+                    <p style="margin-left: 2%;" id="partitions-used">---</p>
+                </div>
+                <hr>
+                <h4>Waiting Queue</h4>
+                <h5 style="margin-left: 2%;">Length:</h5>
+                <p style="margin-left: 4%;" id="waiting-queue-length">---</p>
+
+                <table class="table table-hover">
+                    <thead>
+                        <tr class="table-success">
+                            <td>Job #</td>
+                            <td>Time Waiting</td>
+                        </tr>
+                    </thead>
+                    <tbody id="waiting-queue">
+                    </tbody>
+                </table>
+                <hr>
+                <h4>Internal Fragmentation</h4>
+                <table class="table table-hover">
+                    <thead>
+                        <tr class="table-success">
+                            <td>Memory Block #</td>
+                            <td>Unused Space</td>
+                        </tr>
+                    </thead>
+                    <tbody id="internal-fragmentation">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col">
+                <h3>Summarized Data</h3>
+                <hr>
+                <h4>Throughput</h4>
+                <h5 style="margin-left: 2%;">Average Throughput:</h5>
+                <p style="margin-left: 4%;" id="avg-throughput">---</p>
+                <hr>
+                <h4>Storage Utilization</h4>
+                <h5 style="margin-left: 2%;">Average % of partitions used:</h5>
+                <p style="margin-left: 4%;" id="avg-partitions-used">---</p>
+                <h5 style="margin-left: 2%;">Average % of partitions not used:</h5>
+                <p style="margin-left: 4%;" id="avg-partitions-not-used">---</p>
+                <hr>
+                <h4>Waiting Queue</h4>
+                <h5 style="margin-left: 2%;">Total Number of Jobs Waiting:</h5>
+                <p style="margin-left: 4%;" id="total-waiting-jobs">---</p>
+                <h5 style="margin-left: 2%;">Total Time Waiting:</h5>
+                <p style="margin-left: 4%;" id="total-time-waiting-jobs">---</p>
+                <hr>
+                <h4>Internal Fragmentation</h4>
+                <h5 style="margin-left: 2%;">Total Number of Memory Blocks Having Internal Fragmentation:</h5>
+                <p style="margin-left: 4%;" id="total-blocks-internal-fragmentation">---</p>
+                <h5 style="margin-left: 2%;">Total Unused Space Size:</h5>
+                <p style="margin-left: 4%;" id="total-unused-space">---</p>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CMSC 125 - Lab 2</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1 class="display-3">CMSC 125 - Lab 2</h1>
+        <hr class="my-4">
+        <p>Processor Management and Job Scheduling</p>
+    </div>
+    <div class="row">
+    <div class="first-col">
+                <fieldset class="form-group">
+                    <legend>CPU Scheduling Algorithms</legend>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="optionsRadios" id="fcfs" checked="">
+                            FCFS
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="optionsRadios" id="sjf">
+                            SJF
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="optionsRadios" id="srpt">
+                            SRPT
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="optionsRadios" id="priority">
+                            Priority
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="optionsRadios" id="rr">
+                            Round Robin
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset class="form-group">
+                    <legend>Options</legend>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input id="ds1" class="form-check-input" name="optionsRadios2" type="radio">
+                            Use Sample Data Set 1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input id ="ds2" class="form-check-input" name="optionsRadios2" type="radio">
+                            Use Sample Data Set 2
+                        </label>
+                    </div>
+                    <div class="form-check">
+                            <label class="form-check-label">
+                                <input id="quiz" class="form-check-input" name="optionsRadios2" type="radio" checked="">
+                                Use Quiz Data Set
+                            </label>
+                        </div>
+                </fieldset>
+                
+                <!---
+                <legend>Add Process</legend>
+                <div class="form-group">
+                    <label>Quantum</label>
+                    <input type="text" class="form-control" id="quantum" placeholder="Enter quantum">
+                </div>
+                <div class="form-group">
+                    <label>Arrival Time</label>
+                    <input type="text" class="form-control" id="arrival-time" placeholder="Enter arrival time">
+                </div>
+                <div class="form-group">
+                    <label>Burst Time</label>
+                    <input type="text" class="form-control" id="burst-time" placeholder="Enter burst time">
+                </div>
+                <div class="form-group">
+                    <label>Priority</label>
+                    <input type="text" class="form-control" id="priority-text" placeholder="Enter priority number">
+                </div>
+                <br>
+                <div class="row">
+                    <button type="button" class="btn btn-primary">Add Process</button>
+                </div>
+                -->
+                <hr class="my-4">
+
+                <div class="row">
+                    <button onclick="start()" type="button" class="btn btn-success">Start</button>
+                </div>
+                
+                <br>
+
+
+                <div class="row">
+                    <button onclick="reset()" type="button" class="btn btn-primary">Reset</button>
+                </div>
+                
+            </div>
+            <div class="second-col">
+                    <table class="table table-hover">
+                            <thead>
+                              <tr>
+                                <th scope="col">Process</th>
+                                <th scope="col">Arrival Time (ms)</th>
+                                <th scope="col">CPU Burst Time (ms)</th>
+                                <th scope="col">Priority</th>
+                              </tr>
+                            </thead>
+                            <tbody id="main">
+                    <!--add data here-->
+                          </tbody>
+                        </table>  
+            </div>
+        </div>
+        <br>
+            <div class="second-row">
+                <h3>Result:</h3>
+                <h4>[Average Waiting Time]</h4>
+                <p id="avg"></p>
+                <h4>[Average Turnaround Time]</h4>
+                <p id="tat"></p>
+                <h4>[Quantum (ms)]</h4>
+                <p id="quantum"></p>
+                <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col">Process</th>
+                            <th scope="col">Waiting Time (ms)</th>
+                            <th scope="col">Turnaround Time (ms)</th>
+                          </tr>
+                        </thead>
+                        <tbody id="result">
+                <!--add data here-->
+                      </tbody>
+                    </table> 
+            </div>
+      
+    
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

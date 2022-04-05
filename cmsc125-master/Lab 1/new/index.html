@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CMSC 125 | Lab 1</title>
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <div class="jumbotron">
+        <h1 class="display-3"> Lab 1 </h1>
+        <p class="lead"> Multiprogramming with Time-sharing Systems </p>
+    </div>
+
+    <div class="container-fluid">
+        <div class="random-numbers">
+            <h5 class='text-success'> <strong> Number of Users: </strong> </h5>
+            <h5 class='text-success'> <strong> Number of Resources: </strong> </h5>
+        </div>
+
+        <div class="overall">
+            <h4 class='text-success'> <strong>[OVERALL VIEW] Users and Their Assigned Resources </strong> </h4>
+            <table class="table table-hover">
+                <thead>
+                    <tr class="table-secondary">
+                        <th scope="col">User</th>
+                        <th scope="col">Resource</th>
+                        <th scope="col">Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="main">
+            <div class="currently-processing">
+                <h4 class='text-success'> <strong> Currently Processing </strong> </h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 100%"
+                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                    </div>
+                </div>
+                <br>
+            </div>
+
+            <div class="waiting">
+                <h4 class='text-info'> <strong> Waiting to be Processed </strong> </h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 100%"
+                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                    </div>
+                </div>
+                <br>
+            </div>
+
+            <div class="standby">
+                <h4 class='text-warning'> <strong> Standby Resources </strong>
+                    <small> (Resources that have finished processing) </small> </h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 100%"
+                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    </div>
+                </div>
+                <br>
+            </div>
+
+            <div class="unused">
+                <h4 class='text-danger'> <strong> Unused Resources </strong>
+                    <small> (Resources that were never assigned to any user) </small> </h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%"
+                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div> <!---main-->
+    </div> <!---container-fluid-->
+    <script src="script.js"></script>
+</body>
+
+</html>

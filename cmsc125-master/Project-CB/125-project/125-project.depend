@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1576423948 source:c:\users\user\documents\school\[4] 1191\cmsc 125\lab\cmsc125\project-cb\125-project\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<unistd.h>
+	<ctype.h>
+	<dirent.h>
+	<stdint.h>
+	<time.h>
+	<math.h>
+	<wchar.h>
+	<libgen.h>
+	<windows.h>
+	<sys/stat.h>
+

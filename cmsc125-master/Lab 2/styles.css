@@ -1,0 +1,18 @@
+button {
+    width: 100%;
+}
+
+.first-col {
+    margin-left: 3%;
+    width: 20%;
+}
+
+
+.second-col{
+    margin-left: 5%;
+    width: 40%;
+}
+
+.second-row{
+    margin-left: 2%;
+}
