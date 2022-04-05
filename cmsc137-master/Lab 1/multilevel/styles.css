@@ -1,0 +1,134 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    flex-direction: column;
+    background-color: #222;
+    color: white;
+}
+
+/* main container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+/*=============== HEADER =====================*/
+/* header */
+#header {
+    text-align: center;
+    font-size: 48px;
+}
+
+
+input {
+    padding-left: 3%;
+}
+
+
+/*============== TABS =======================*/
+
+/* Style the tab */
+.tabs {
+    overflow: hidden;
+    background-color: #ffffff;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+/* tab elements */
+.tablinks {
+    padding: 20px 60px 20px 60px;
+    font-size: 18px;
+}
+
+/* buttons inside the tab */
+button {
+    background-color: #ccc;
+    color: white;
+    border-radius: 2px;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+button:hover {
+    background-color: #43ddb7;
+    color: #222;
+}
+
+/* Create an active/current tablink class */
+button.active {
+    background-color: #43ddb7;
+    color: #222;
+}
+
+
+/*================= TAB AREA ================*/
+
+#tab-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    padding: 40px;
+    margin: 0 10px 0 10px;
+}
+
+/*==== DATA INPUT =====*/
+#input-data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+#bitstream-input {
+    margin: 40px 20px 40px 20px;
+    height: 50px;
+    text-align: left;
+    font-size: 18px;
+}
+
+#plot-button {
+    width: 200px;
+    
+}
+
+/*==== GRAPH =====*/
+#graph-area {
+    margin: 30px 60px 30px 60px;
+    width: 1200px;
+    padding: 0;
+    border: 1px solid black;
+}
+.plot-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-items: center !important;
+    justify-content: center !important;
+}
+
+#explanation-area {
+    margin: 10px 60px 10px 60px;
+}
+
+#explanation {
+    font-size: 20px;
+    text-align: left;
+}

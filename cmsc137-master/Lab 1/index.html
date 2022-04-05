@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Line Encoding Schemes</title>
+  <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="jumbotron">
+    <h1 class="display-3">Line Coding Schemes</h1>
+    <hr class="my-4">
+    <h5>Janelle Elaiza F. Unabia</h5>
+    <h5>CMSC 137 - Lab 1</h5>
+  </div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+        <div class="center ff card-header">Unipolar</div> 
+        <p class="center ff">Uses only one voltage level</p>
+        <div class="card-body">
+            <a href="nrz"><h4 class="card-title">NRZ</h4></a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card text-white bg-warning mb-3" style="max-width: 20rem;">
+        <div class="center ff card-header">Polar<br></div><p class="center ff">Uses two voltage levels <br>(positive and negative)</p>
+
+        <div class="card-body">
+            <a href="nrz-l"><h4 class="card-title">NRZ-L</h4></a>
+            <a href="nrz-i"><h4 class="card-title">NRZ-I</h4></a>
+            <a href="rz"><h4 class="card-title">RZ</h4></a>
+          <a href="manchester"><h4 class="card-title">Manchester</h4></a>
+          <a href="differential-manchester"><h4 class="card-title">Differential Manchester</h4></a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card text-white bg-info mb-3" style="max-width: 20rem;">
+        <div class="center ff card-header">Bipolar</div>
+        <p class="center ff">Uses three voltage levels:<br>
+        Positive, zero and negative</p>
+        <div class="card-body">
+            <a href="ami"><h4 class="card-title">AMI</h4></a>
+            <a href="pseudoternary"><h4 class="card-title">Pseudoternary</h4></a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card text-white bg-danger mb-3" style="max-width: 20rem;">
+        <div class="center ff card-header"><a href="multilevel/index.html">Multilevel</a></div>
+        <div class="card-body">
+            <h4 class="card-title">2B/1Q</h4>
+          <h4 class="card-title">8B/6T</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<script type="text/javascript" src="main.js"></script>
+</html>
