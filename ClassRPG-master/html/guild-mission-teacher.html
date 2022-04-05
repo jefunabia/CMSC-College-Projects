@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ClassRPG | Guild Mission</title>
+    <link rel="stylesheet" type="text/css" href="../css/animate.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+</head>
+
+<body>
+    <style>
+        body {
+            height: 100%;
+            background-image: linear-gradient(to bottom, rgba(48, 48, 48, 0.7), rgba(32, 32, 32, 0.7)),
+                url("../assets/tos.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+    <!---Nav Bar-->
+    <img src="../assets/title.png" width="30%" height="100%">
+    <a href="home-teacher.html"> <img src="../assets/home-btn.png" width="20%" height="20%"> </a>
+    <a href="profile.html"> <img src="../assets/profile-btn.png" width="20%" height="20%"> </a>
+    <a href="../index.html" onclick="logOut()"> <img src="../assets/sign-out.png" width="20%" height="20%"> </a>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h2 class="center yellow" id="course-code">Guild Mission:</h2>
+
+                <div class="center">
+                        <button class="reg-btn btn btn-primary" onclick="viewAccessKey()"> View Access Key</button>
+                    <p id="access-key">loading...</p>
+
+                    <br> <br>
+                    <button class="reg-btn btn btn-primary" onclick="view_participants()"> View Participants</button>
+
+                </div>
+            </div>
+                <div class="center col">
+                    <h2 class="yellow">Overall XP</h2>
+                    <div id="overall-total"></div>
+                    <div class="total">
+                        <div id="quiz-total"></div>
+                        <div id="lab-total"></div>
+                        <div id="exam-total"></div>
+
+                    </div>
+                </div>
+           
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-sm-4">
+                    <img src="../assets/winged-scepter.png" width:="80px" height="80px">
+                <h2 class="reg-label in-line center">Add Guild Activity</h2>
+
+                <div id="add_quiz">
+                    <br>
+                    <div class="form-group">
+                    <h3>Title:</h3> 
+                    <input type="text" id="qtitle" class="reg-input form-control"  placeholder="Enter guild activity title">
+                    </div>
+
+                    <div class="form-group">
+                    <h3>Date:</h3>
+                    <input type="text" id="date" class="reg-input form-control"  placeholder="Enter date">
+                     </div>
+
+                     <div class="form-group">
+                    <h3>Type:</h3>
+                    <select id="activity_type" class="reg-input form-control">
+                        <option value="quiz" selected="">Quiz</option>
+                        <option value="lab-activity">Lab Activity</option>
+                        <option value="exam">Exam</option>
+                    </select>
+                </div>
+                 
+                    <lu>
+                            <div class="form-group">
+                        <h3>Sub-Activity Name:</h3> 
+                        <input type="text" placeholder="Enter sub-topic name" id="subtopic" class="reg-input form-control"></input>
+                        </div>
+
+                        <div class="form-group">
+                        <h3>Total:</h3> 
+                        <input type="number" id="total_num" value="0" class="reg-input form-control"></input>
+                    </div>
+                    <div class="form-group">
+                        <button class="center reg-input btn btn-secondary" onclick="addSubs()">Add Sub-Activity</button>
+                    </div>
+                    </lu>
+                    
+                    <br><button class="reg-btn btn btn-primary" onclick="addActivity()">Submit</button>
+            <br><br>
+            <img src="../assets/book-aura.png" width:="64px" height="64px">
+                        <h2 class="reg-label in-line">Added Sub-Activities</h2><br>
+
+                    <div class="subs_list" id="subs_container">
+                        none..
+                    </div>
+       
+                </div> <br>
+            </div>
+
+
+            <br><br>
+            <div class="col">
+                
+                    <img src="../assets/checked-shield.png" width:="64px" height="64px">
+                    <h2 class="reg-label in-line">Quizzes</h2>
+                    <br> <br>
+
+                <div id="quiz">
+                    nothing yet...
+                    <!-- <button onclick="viewMission()">Quiz #1</button> -->
+                </div>
+
+
+                <div id="view-mission">
+                    
+                </div>
+            </div>
+
+            <div class="col">
+                                    <img src="../assets/halberd-shuriken.png" width:="64px" height="64px">
+                    <h2 class="reg-label in-line">Lab Activities</h2>
+                    <br><br>
+                <div id="labs">
+                        nothing yet...
+                </div>
+                <div id="lab-view">
+                    
+                </div>
+            </div>
+
+            <div class="col">
+                    <img src="../assets/lunar-wand.png" width:="64px" height="64px">
+                    <h2 class="reg-label in-line">Exams</h2>
+                    <br><br>
+                <div id="exams">
+                    nothing yet...
+                </div>
+                <div id="exam-view">
+                    
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-database.js"></script>
+
+    <script src="../js/firebase-connect.js"></script>
+    <script src="../js/guild-teacher.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ClassRPG | Home - Teacher</title>
+    <link rel="stylesheet" type="text/css" href="../css/animate.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+</head>
+
+<body>
+    <style>
+        body {
+            height: 100%;
+            background-image: linear-gradient(to bottom, rgba(48, 48, 48, 0.7), rgba(32, 32, 32, 0.7)),
+                url("../assets/tos.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+    <!---Nav Bar-->
+    <img src="../assets/title.png" width="30%" height="100%">
+    <a href="home-teacher.html"> <img src="../assets/home-btn.png" width="20%" height="20%"> </a>
+    <a href="profile.html"> <img src="../assets/profile-btn.png" width="20%" height="20%"> </a>
+    <a href="../index.html" onclick="logOut()"> <img src="../assets/sign-out.png" width="20%" height="20%"> </a>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="header">
+                    <!-- <h1>Greetings, "name" !</h1> -->
+                </div>
+                <img src="../assets/scroll.png" width:="80px" height="80px">
+                <h2 class="reg-label in-line">My Guild Missions</h2>
+                <hr>
+
+                <div class="sub-container">
+                    loading...
+                    <!-- <button><a href="guild-mission-teacher.html" onclick="dispSubjects">Subject</a></button> -->
+                    <!-- <button>Subject 2</button> -->
+                </div>
+                <br> <br>
+                <img src="../assets/tied-scroll.png" width:="80px" height="80px">
+                <h2 class="reg-label in-line">Add Guild Mission</h2>
+                <hr>
+                <p id="add-subject">
+
+                    <h4>Guild Mission Name:</h4>
+                    <input type="text" id="subject" class="form-control">
+                    <br>
+            <button  class="reg-btn btn btn-primary" onclick="submit('add-subject')" class="btn submit-btn btn-primary">Submit</button>
+    
+                </p>
+            </div>
+            <div class="col">
+                <img src="../assets/corsair.png">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-database.js"></script>
+    
+    <script src="../js/firebase-connect.js"></script>
+   <script src="../js/teacher-view.js"></script>
+    <script src="../js/guild.js"></script>
+</body>
+
+</html>

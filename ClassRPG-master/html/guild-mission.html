@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ClassRPG | Guild Mission</title>
+    <link rel="stylesheet" type="text/css" href="../css/animate.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+</head>
+
+<body>
+
+    <style>
+        body {
+            height: 100%;
+            background-image: linear-gradient(to bottom, rgba(48, 48, 48, 0.7), rgba(32, 32, 32, 0.7)),
+                url("../assets/tos.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>
+    <!---Nav Bar-->
+    <img src="../assets/title.png" width="30%" height="100%">
+    <a href="home-student.html"> <img src="../assets/home-btn.png" width="20%" height="20%"> </a>
+    <a href="profile.html"> <img src="../assets/profile-btn.png" width="20%" height="20%"> </a>
+    <a href="../index.html" onclick="logOut()"> <img src="../assets/sign-out.png" width="20%" height="20%"> </a>
+
+    <div class="container-fluid">
+        <h2 class="center yellow" id="course-number">Guild Mission:</h2>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <h3 id="CXP">Current XP: </h3>
+                <div class="center" id="xp-bar"></div>
+            </div>
+            <div class="col">
+                    <img src="../assets/checked-shield.png" width:="64px" height="64px">
+                    <h2 class="reg-label in-line">Quizzes</h2>
+                    <br> <br>
+                <div id="quiz">
+                    nothing yet..
+                    <!-- <button    onclick="viewMission()">Quiz #1</button> -->
+                </div>
+                <div id="view-mission">
+                    Date: <br>
+                    Topic: <br>
+                    Subtopic 1 <input type="text" disabled value="My XP"></input> <br>
+                    Subtopic 2 <input type="text" disabled value="My XP"></input> <br>
+                    Subtopic 3 <input type="text" disabled value="My XP"></input> <br>
+
+                    XP Gained: <br>
+                    Topic Total XP: <br> <br>
+
+                </div>
+            </div>
+            <div class="col">
+                    <img src="../assets/halberd-shuriken.png" width:="64px" height="64px">
+                    <h2 class="reg-label in-line">Lab Activities</h2>
+                    <br><br>
+                <div id="labs">
+                    nothing yet..
+                </div>
+                <div id="lab-view">
+                    </div>
+            </div>
+            <div class="col">
+                    <img src="../assets/lunar-wand.png" width:="64px" height="64px">
+                    <h2 class="reg-label in-line">Exams</h2>
+                    <br><br>
+                <div id="exams">
+                    nothing yet..
+                </div>
+                <div id="exam-view"></div>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.0/firebase-database.js"></script>
+
+    <script src="../js/firebase-connect.js"></script>
+
+    <script src="https://cdn.rawgit.com/kimmobrunfeldt/progressbar.js/1.1.0/dist/progressbar.js"></script>
+    <script src="../js/progress.js"></script>
+
+    <script src="../js/student-view.js"></script>
+
+
+
+</body>
+
+</html>

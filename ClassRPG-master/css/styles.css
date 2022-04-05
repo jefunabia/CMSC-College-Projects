@@ -1,0 +1,196 @@
+@font-face { 
+    font-family: Breathe Fire; 
+    src: url('../assets/Breathe\ Fire.otf'); 
+} 
+
+@font-face { 
+    font-family: Dalelands Unical; 
+    src: url('../assets/Dalelands\ Uncial.otf'); 
+} 
+
+.col {
+    width: 5%;
+}
+
+/* HIDE RADIO */
+[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* IMAGE STYLES */
+  [type=radio] + img {
+    cursor: pointer;
+  }
+  
+  /* CHECKED STYLES */
+  [type=radio]:checked + img {
+    outline: 4px solid rgb(255, 255, 255);
+  }
+  
+.title {
+    text-align: center;
+    animation-duration: 3s;
+}
+
+.btn-sign-in {
+    text-align: center;
+    animation-delay: 1.5s;
+}
+
+.login-avatar {
+    text-align: center;
+}
+
+.tos-logo:hover {
+    animation: pulse 1.5s;
+}
+
+.h-sign-in {
+    text-align: center;
+    margin-top: 2%;
+}
+
+.navbar-dark {
+    background-color: green;
+}
+
+.tos-logo {
+    text-align: center;
+}
+
+
+hr {
+    background-color: white;
+}
+
+.bg-img {
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+h1, h2, h3 {
+    font-family: Breathe Fire;
+}
+
+.header {
+    font-family: Breathe Fire;
+    color: #f4c154;
+}
+
+/*
+.tos-bg{
+    background-image: url("../assets/tos.jpg"); 
+
+  min-height: 100%;
+  min-width: 1024px;
+	
+
+  width: 100%;
+  height: auto;
+	
+
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+*/
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+    tos-bg {
+      left: 50%;
+      margin-left: -512px;   /* 50% */
+    }
+  }
+
+  .smol {
+      width: 20%;
+  }
+  
+  .register-form {
+      padding: 3%;
+  }
+
+  .center {
+      text-align: center;
+  }
+
+  .reg-btn {
+      text-align: center;
+      width: 100%;
+      padding: 1%;
+      font-size: 22px;
+  }
+
+  .reg-input {
+      margin-left: 5%;
+      width: 80%;
+  }
+
+ .subjects-btn {
+     background-color: #f4ddc5;
+     font-family: Dalelands Unical;
+ }
+
+ .submit-btn {
+     width: 100%;
+     
+ }
+
+ .yellow {
+    color: #f4c154;
+ }
+
+ #xp-bar {
+    width: 50%;
+    /* height: 50%; */
+    height: calc(100vh - 540px);
+    position: relative;
+
+}
+
+
+.labels-btn {
+    background-color: #f4ddc5;
+    font-family: Dalelands Unical;
+    font-size: 20px;
+}
+
+.half {
+    width: 40%;
+}
+
+.custom-btn {
+    width: 18%;
+    margin-right: 1%;
+}
+
+.custom2-btn {
+    width: 20%;
+    margin-right: 1%;
+}
+
+
+.input-xp-form {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.test {
+   float: bottom;
+}
+
+.in-line {
+    display: inline;
+}
+
+.reg-label {
+    margin-left: 3%;
+    position:relative;
+    top:20px;
+}
