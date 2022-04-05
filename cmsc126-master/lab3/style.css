@@ -1,0 +1,434 @@
+
+.social-media {
+  float: left;
+  padding-bottom: 50px;
+}
+
+
+h1{
+  padding-left: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #7b1113;
+  color: white;
+  margin: 0;
+  border-bottom: solid;
+  border-bottom-color:#ffb81d;
+  border-bottom-width: 0.5rem;
+}
+
+
+h2{
+  padding-left: 50px;
+  padding-top: 100px;
+  padding-bottom: 30px;
+  background-color: #7b1113;
+  color: white;
+  margin: 0;
+  border-bottom: solid;
+  border-bottom-color:#ffb81d;
+  border-bottom-width: 0.5rem;
+}
+
+
+body, html {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+
+.main-title{
+  font-size: 60px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 350px;
+  color: #000000;
+  width: 100%;
+}
+
+.white-title{
+  font-size: 60px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 350px;
+  color: #ffffff;
+  width: 100%;
+}
+
+
+.parallax {
+  /* The image used */
+  background-image: url('assets/sinulog2.png');
+
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.parallax2 {
+  background-image: url('assets/philippine-dance.jpg');
+  height: 100%; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax3 {
+  background-image: url('assets/philippine-dance2.jpg');
+  height: 100%; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.parallax4 {
+  background-image: url('assets/philippine-dance3.jpg');
+  height: 100%; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+ 
+  
+}
+
+.tinikling-parallax {
+  background-image: url('assets/tinikling2.jpg');
+  height: 100%; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.ilaw-parallax{
+  background-image: url('assets/pandanggo-sa-ilaw2.jpg');
+  height: 100%; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.idaw-parallax {
+  background-image: url('assets/idaw2.jpg');
+  height: 100%; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.bangko-parallax {
+  background-image: url('assets/sayaw-sa-banko2.jpg');
+  height: 100%; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.itik-parallax {
+  background-image: url('assets/itik-itik.jpg');
+  height: 100%; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.carinosa-parallax {
+  background-image: url('assets/carinosa.jpg');
+  height: 100%; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.singkil-parallax {
+  background-image: url('assets/singkil.jpg');
+  height: 100%; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+
+.sinulog-parallax {
+  background-image: url('assets/sinulog3.jpg');
+  height: 100%; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+
+.first-caption{
+  height:50%;
+  background-color:rgb(255, 255, 255);
+  font-size:20px;
+  text-align: center;
+  padding-top: 100px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 80px;
+}
+
+.author{
+  text-align: right;
+  font-size:20px;
+}
+
+.read-more{
+  text-align: left;
+}
+
+.read-more2{
+  text-align: left;
+  padding-left: 5%;
+  font-size: 18px;
+  padding-right: 10%;
+}
+
+.list-of-dances{
+  height:50%;
+  background-color:rgba(255, 255, 255, 0.2);
+  font-size:16px;
+  text-align: center;
+  padding-top: 80px;
+  padding-left: 50px;
+}
+
+.contact{
+  height:100%;
+  background-color:rgb(255, 255, 255);
+  font-size:16px;
+  padding-top: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.column{
+  float: left;
+  width: 50%;
+  height: 70px;
+  margin: 0;
+}
+
+.column p {
+  padding-left: 80px;
+}
+
+.email {
+  float:right;
+}
+.container{
+  float: left;
+  padding: 2.3%;
+}
+
+.container:hover .image {
+  opacity: 0.5;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /*overflow: hidden;*/
+    background-color: #7b1113;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+  }
+  
+  li {
+    float: left;
+    
+  }
+  
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 25px 16px;
+    text-decoration: none;
+    
+  }
+  
+  li a:hover {
+    background-color: #014421;
+  }
+
+  footer { 
+    padding-top: 20px;
+    padding-left: 20px;
+    margin: 0;
+    display: block;
+    padding-bottom: 20px;
+    background-color: #7b1113;
+    color:white;
+  }
+
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  text-decoration: none;  
+}
+
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;  
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  /*min-width: 160px;*/
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: -1;
+  padding-top: 70px;
+  width:245px;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.main-row {
+  display: flex;
+  margin: 0;
+  background-color: white;
+  
+
+}
+
+/* Create two equal columns that sits next to each other */
+.main-column {
+  flex: 50%;
+  margin: 0;
+  background-color: white;
+  text-align: center;
+}
+
+.main-column .column img{
+  height: 60px;
+  width: 60px;
+}
+.main-column img {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+
+
+.main-column p {
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 10%;
+  font-size: 20px;
+}
+
+
+h3{
+  font-size: 20px;
+  text-align: left;
+}
+
+form{
+  margin: 0;
+  text-align: left;
+  
+}
+
+form input, textarea {
+  padding: 8px;
+  width: 80%;
+  padding-left: 10px;
+}
+
+textarea {
+  height: 200px;
+}
+
+.submit-button {
+  background-color: #26a59a; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  width: 83%;
+  cursor: pointer;
+}
+
+.alert{
+  text-align: left;
+  font-size: 22px;
+  color: #ffffff;
+  background-color: #014421;
+  padding: 10px;
+  width: 80%;
+  display: none;
+}

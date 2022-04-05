@@ -1,0 +1,61 @@
+<!-- CMSC 126 - Unabia Lab1 -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Lab1 - Number 1</title>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Lab 1 - #1 || Janelle Unabia</a>
+  </nav>
+  <link href="https://bootswatch.com/4/darkly/bootstrap.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <h5>Output After Running the Script: </h5>
+  <p id="demo">Nothing</p>
+
+  <p class="text-info">
+    <button type="button" class="btn btn-success" onclick="myFunction()">Click me</button><br><br>
+    Script:<br>
+    function myFunction() {<br>
+    var arr1 = ["Cecilie", "Lone"];<br>
+    var arr2 = ["Emil", "Tobias", "Linus"];<br>
+    var arr3 = ["Robin", "Morgan"];<br>
+    document.getElementById("demo").innerHTML = arr1.concat(arr2, arr3);<br>
+    }<br><br>
+  </p>
+  <p class="text-success">
+    Description:<br>
+    The script defines the function that combines / concatenates arr1 + arr2 + arr3 and returns the newly combined
+    array.<br><br>
+
+    The script replaces the value/text of the element with the id "demo" with its function's corresponding output.<br><br>
+
+    Desired Output: Cecilie,Lone,Emil,Tobias,Linus,Robin,Morgan<br><br>
+
+    To display the output of the function, we must manipulate some of the HTML elements. <br><br>
+  </p>
+  <script>
+    function myFunction() {
+      var arr1 = ["Cecilie", "Lone"];
+      var arr2 = ["Emil", "Tobias", "Linus"];
+      var arr3 = ["Robin", "Morgan"];
+      document.getElementById("demo").innerHTML = arr1.concat(arr2, arr3);
+    }
+  </script>
+</body>
+
+</html>
+
+<!--
+  Script Description:
+  
+  The script defines the function that combines / concatenates arr1 + arr2 + arr3 and returns the newly combined array.
+
+  The script replaces the value/text of the element with the id "demo" with its function's corresponding output.
+
+  Desired Output: Cecilie,Lone,Emil,Tobias,Linus,Robin,Morgan
+
+  To display the output of the function, we must manipulate some of the HTML elements. 
+-->

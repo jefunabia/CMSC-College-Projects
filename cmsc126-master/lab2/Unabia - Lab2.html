@@ -1,0 +1,86 @@
+<!--Unabia Lab2-->
+<!doctype html>
+
+<head>
+  <title>Lab 2</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://bootswatch.com/4/darkly/bootstrap.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">CMSC126 - Lab2    || Janelle Unabia</a>
+  </nav>
+
+  <div class="small-container">
+    <div class="jumbotron">
+      <h1>To-Do List:</h1>
+      <form>
+        <input id="item" class="form-control" type="text" placeholder="Enter your task here">
+        <small class="form-text text-muted">Please press enter to add a task.</small>
+
+      </form>
+    </div>
+
+    <div>
+      <h2>Tasks</h2>
+      <div class=btnDiv>
+        <button type="button" class="btn btn-danger">Clear</button>
+      </div>
+      <ul></ul>
+    </div>
+  </div>
+  </div>
+
+  <script>
+    const form = document.querySelector('form')
+    const ul = document.querySelector('ul')
+    const button = document.querySelector('button')
+    const input = document.getElementById('item')
+
+    // to solve the problem: after closing the browser/reloading the page, all the existing information in localStorage is gone. nothing is displayed in the front end
+    // if localStorage exists, then JSON.parse, else reset to empty array
+    let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : []
+    
+    //......................
+    // for storage purposes
+    // create a localStorage key called "items"
+    // stringify-convert a data array to a string
+    localStorage.setItem('items', JSON.stringify(itemsArray)) //convert a data array to a string
+    const data = JSON.parse(localStorage.getItem('items')) // to convert the contents of localStorage back into a js object (needed in the loop--data variable) 
+
+    // creates an li element, sets the text of the element to the parameter, and appends the list item to the ul (used in loop) 
+    // displaying inputs
+    const liMaker = text => {
+      const li = document.createElement('li')
+      li.textContent = text
+      ul.appendChild(li)
+    }
+
+    // event listener to the form that listens/waits for a submit event -- pressing enter
+    form.addEventListener('submit', function (e) {
+      e.preventDefault() // will prevent the form from the default submit action
+      itemsArray.push(input.value) // push any new input value into the array, then set the  localStorage to the new, updated value.
+      localStorage.setItem('items', JSON.stringify(itemsArray)) 
+      liMaker(input.value) //create the item with the text of the input value and append it to the DOM.
+      input.value = '' // to avoid erasing input manually after submitting
+    })
+
+    // If existing data exists, loop through everything in the localStorage in a form JavaScript can understand and work with, and run the liMaker() again to display
+    data.forEach(item => {
+      liMaker(item)
+    })
+
+    // button - if clicked, clear all data from localStorage and also removing every child node from the ul.
+    button.addEventListener('click', function () {
+      localStorage.clear() // clear local storage
+      
+      // clear frontend
+      while (ul.firstChild) { // firstChild property returns the first child node of the specified node, as a Node object.
+        ul.removeChild(ul.firstChild)
+      }
+    })
+  </script>
+</body>
+
+</html>

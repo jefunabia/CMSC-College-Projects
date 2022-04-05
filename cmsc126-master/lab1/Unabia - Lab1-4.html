@@ -1,0 +1,73 @@
+<!-- CMSC 126 - Unabia Lab1 -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Lab1 - Number 4</title>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Lab 1 - #4 || Janelle Unabia</a>
+  </nav>
+  <link href="https://bootswatch.com/4/darkly/bootstrap.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <h5>Output After Running the Script: </h5>
+  <p id="demo">Test</p>
+  <p class="text-info">
+    <button type="button" class="btn btn-success" onclick="myFunction()">Click me</button><br><br>
+
+    Script:<br>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];<br>
+    document.getElementById("demo").innerHTML = fruits;<br><br>
+
+    function myFunction() {<br>
+    fruits.unshift("Lemon");<br>
+    document.getElementById("demo").innerHTML = fruits;<br>
+    }<br><br>
+  </p>
+  <p class="text-success">
+    Description:<br>
+    The script first replaces and displays the value/text of the element with the id "demo" to
+    "Banana,Orange,Apple,Mango".<br><br>
+
+    The script defines the function in which the function adds new items to the beginning of an array, and returns the
+    new length/string.<br><br>
+
+    The script then replaces "Banana,Orange,Apple,Mango" with its function's corresponding output.<br><br>
+
+    Desired Output w/ calling myFunction once: "Lemon,Banana,Orange,Apple,Mango"<br><br>
+
+    If the script with the function is called again, "Lemon" will always be added into the first element of the new
+    string.<br><br>
+
+    To display the output of the function, we must manipulate some of the HTML elements. <br>
+  </p>
+  <script>
+    var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    document.getElementById("demo").innerHTML = fruits;
+
+    function myFunction() {
+      fruits.unshift("Lemon");
+      document.getElementById("demo").innerHTML = fruits;
+    }
+  </script>
+</body>
+
+</html>
+
+<!--
+  Script Description:
+
+  The script first replaces and displays the value/text of the element with the id "demo" to "Banana,Orange,Apple,Mango".
+
+  The script defines the function in which the function adds new items to the beginning of an array, and returns the new length/string.
+
+  The script then replaces "Banana,Orange,Apple,Mango" with its function's corresponding output.
+
+  Desired Output w/ calling myFunction once: "Lemon,Banana,Orange,Apple,Mango"
+   
+   If the script with the function is called again, "Lemon" will always be added into the first element of the new string.
+
+    To display the output of the function, we must manipulate some of the HTML elements. 
+-->
